@@ -1,0 +1,462 @@
+/* Scss Document */
+
+
+$color-light: #fff;
+$color-sek: #ef640f;
+$color-text: #6F6F6F;
+$color-head: #454545;
+$pic-outline: 1px solid $color-text;
+
+
+
+
+
+// GENERELLE TING
+
+body{
+	font-family: helvetica, arial, sans-serif;
+	display: block;
+	margin: 0 auto;
+	background: #f1f1f1;
+}
+h2{
+	font-size: 1.8em;
+	color: $color-head;
+	width: 100%;
+	padding: 5px 0;
+	font-weight: bold;
+	&#loggedout{
+		text-align: center;
+		margin: 100px 0 400px;
+	}
+}
+h3{
+	font-size: 1em;
+	font-weight: bold;
+	color: $color-head;
+	padding: 5px 0;
+	
+}
+p, li{
+	font-size: 0.95em;
+	color: $color-text;
+	font-weight: 100;
+	line-height: 21px;
+	padding: 0;
+	b{
+		font-weight: 400;
+	}
+}
+a{
+	color: $color-sek;
+	text-decoration: none;
+	font-size: 0.95em;
+	&:hover{
+		color: $color-text;
+	}
+}
+.spacer{width: 31.5%;}
+.headline{padding: 0 0 20px;}
+.headline1{margin: 30px 0 50px 0;}
+
+// BODY CONTAINER
+.container{
+	max-width: 1150px;
+	margin: 50px auto 0;
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+}
+.container-content, .container-content1{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+	margin: 0;
+}
+
+
+
+
+
+
+// MENU
+ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+	margin-left: 45px;
+	li {
+		float: left;
+		.dropdown{
+			display: inline-block;
+		}
+		a, .dropbtn{
+			display: inline-block;
+			color: $color-text;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			&.selected {
+				color: $color-sek;
+			}
+		}
+	}
+}
+ul li a:hover, .dropdown:hover .dropbtn {
+    color: $color-sek;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	a{
+		color: $color-text;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		text-align: left;
+		&:hover{
+			background-color: $color-sek;
+			color: $color-light;
+		}
+	}
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+
+// TOP
+.header{
+	width: 100%;
+	text-align: center;
+	background: #fff;
+	.logo{
+		margin: 50px 0 20px;
+		height: 100px;
+	}
+}
+
+
+
+
+
+
+// INDEX 
+.post{
+	width: 31.5%;
+	outline: $pic-outline;
+	margin-bottom: 30px;
+	background: #fff;
+	box-shadow: 3px 3px 3px $color-text;
+	img{
+		display: block;
+		margin: 25px auto;
+		max-width: 95%;
+		max-height: 300px;
+	}
+	p {
+		margin: 0 20px;
+		line-height: 20px;
+		font-size: 0.8em;
+	}
+	h3{
+		text-align: center;
+		padding-bottom: 10px;
+		margin: 0;
+	}
+	.time{
+		font-size: 0.7em;
+		text-align: right;
+		padding: 10px 10px 0 0;
+		margin: 0;
+		background: #333;
+		color: #eee;
+	}
+}
+
+
+
+
+
+
+
+
+// PROFILE SIDEN
+.profile{
+	width: 45%;
+	margin-right: 5%;
+	margin-bottom: 50px;
+	h3 a{
+		font-size: 0.7em;
+	}
+}
+.upload{
+	width: 45%;
+	margin: 0 auto;
+	text-align: center;
+	form {
+		color: $color-light;
+		display: block;
+		margin: 0 auto;
+		background: $color-head;
+		justify-content: center;
+		padding: 0 0 30px 0;
+		legend{
+			display: block;
+			color: $color-light;
+			font-size: 2em;
+			text-align: center;
+			margin: 0 auto;
+			padding: 30px 0;
+			font-weight: bold;
+		}
+		a{
+			float: right;
+		}
+		select, input, textarea{
+			width: 400px;
+			font-size: 0.8em;
+			line-height: 22px;
+		}
+		.uploadbtn{
+			width: auto;
+			font-size: 0.8em;
+			background-color: $color-sek;
+			color: $color-light;
+			border: 2px solid $color-sek;
+			border-radius: 3px;
+			box-shadow: 3px 3px 3px #333;
+			cursor: pointer;
+			&:hover{
+				background-color: $color-text;
+				border: 2px solid $color-text;
+			}
+		}
+	}
+}
+
+
+
+// POSTS ON THE SITE PROFILE
+
+.delete {
+	border: none;
+	cursor: pointer;
+	background: none;
+	margin: -20px 0 0 0;
+	img{
+		height: 20px;
+		opacity: 0.6;
+		&:hover{opacity: 1;}
+	}
+	float: right;
+	
+}
+#edit{
+	height: 16px;
+	float: right;
+	margin: 8px 0 0 0;
+	opacity: 0.6;
+	&:hover{opacity: 1;}
+}
+.post-profile-title{
+	padding: 20px 0 0 35px ;
+}
+
+
+
+
+
+
+
+
+
+
+// UPLOAD
+
+.message{
+	width: 100%;
+	h3{
+		text-align: center;
+	}
+}
+
+
+
+
+
+
+
+
+// LOGIN AND SIGNUP
+.login {
+	display: block;
+	margin: 0 auto 200px;
+	a{
+		float: right;
+	}
+	.btn{
+		width: auto;
+		font-size: 0.8em;
+		background-color: $color-head;
+		color: $color-light;
+		border: 2px solid $color-head;
+		border-radius: 3px;
+		box-shadow: 3px 3px 3px $color-text;
+		cursor: pointer;
+		float: right;
+		&:hover{
+			background-color: $color-sek;
+			border: 2px solid $color-sek;
+			
+		}
+	}
+	input, textarea, select{
+		width: 400px;
+		font-size: 0.8em;
+		line-height: 22px;
+	}
+}
+.login-headline{
+	text-align: center;
+	padding: 0 0 20px;
+	margin-top: 70px;
+}
+
+
+
+
+
+
+// ARTISTS
+
+.artists{
+	width: 31.5%;
+	outline: $pic-outline;
+	margin-bottom: 30px;
+	padding-bottom: 20px;
+	background: $color-light;
+	box-shadow: 3px 3px 3px $color-text;
+	min-height: 250px;
+	&:hover{
+		background: $color-sek;
+		h3{color: $color-light;}
+		p{color: $color-light;}
+		transition: 0.4s;
+	}
+	p {
+		margin: 0 20px;
+		line-height: 20px;
+		font-size: 0.8em;
+		color: $color-text;
+	}
+	h3{
+		text-align: center;
+		width: 100%;
+		padding: 20px 0;
+		margin: 0;
+		color: $color-sek;
+	}
+	.time{
+		font-size: 0.7em;
+		text-align: right;
+		padding: 10px 10px 0 0;
+		margin: 0;
+		color: $color-text;
+	}
+}
+
+
+
+
+
+
+// ARTIST-PROFILE SIDEN
+
+.artist-profile{
+	width: 50%;
+	margin-bottom: 60px;
+	h3 a{
+		font-size: 0.7em;
+	}
+}
+.artist-profile-headline{
+	margin: 0 0 30px;
+}
+
+
+
+
+
+
+
+//footer
+
+footer{
+	width: 100%;
+	height: 100px;
+	margin-top: 100px;
+	background: $color-sek;
+	text-align: center;
+	p{
+		padding-top: 30px;
+		color: $color-light;
+		font-size: 0.7em;
+		&#copyright{
+			padding: 0;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// INFO BOKSE
+.infobox, .infobox1, .infobox2{
+	width: 100%;
+	z-index: 3;
+	position: absolute;
+	background: #f1f1f1;
+	height: 300px;
+	top: 230px;
+	left: 0;
+	h3, p {
+		text-align: center;
+		padding: 20px 0;
+	}
+	a{text-align: center;}
+	h3{margin-top: 100px;}
+}
+.infobox2{padding-top: 100px;}
+.infobox{height: 500px;}
+.upload-info h3, .upload-info p{margin: 0;}
+.upload-info h3, .upload-info p{padding: 10px;}
+.info{
+	width: 100%; 
+	margin: 10px 0;
+	h3{color: $color-sek;}
+}
+
+
+
+
+
+
+
